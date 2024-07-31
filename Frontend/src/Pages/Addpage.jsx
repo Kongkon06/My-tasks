@@ -19,7 +19,8 @@ export function Addfuntion(){
             });
             console.log(result);
             if(result.data.message=="Done"){
-                navigate('/'+sitename+'?id='+id);
+                if(sitename=="Maintask"){navigate('/');
+                }else{navigate('/'+sitename+'?id='+id);}
             }else{
                 alert('didnt work');
             }
